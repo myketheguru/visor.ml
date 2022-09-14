@@ -68,11 +68,11 @@ export const Room = () => {
                     {/* <VideoCard stream={screenSharingVideo} /> */}
                     {/* <VideoCard stream={screenSharingVideo} />
                     <VideoCard stream={screenSharingVideo} /> */}
-                    {/* {Object.values(peersToShow as PeerState)
+                    {Object.values(peersToShow as PeerState)
                         .filter((peer) => !!peer.stream)
                         .map((peer, index) => (
-                            <VideoCard stream={peer.stream} key={peer.peerId} />  
-                        ))} */}
+                            <VideoCard stream={peer.stream} key={index} />  
+                        ))}
                 </div>
                 <aside></aside>
             </main>

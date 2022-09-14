@@ -13,7 +13,7 @@ const VideoCard = (props: any) => {
     }, [props?.stream]);
 
   return (
-    <div className="bg-[#242628] only:bg-transparent group w-full md:w-auto only:w-full only:h-full flex-1 h-[400px] rounded-lg overflow-hidden">           
+    <div className="bg-[#1e1f20] only:bg-transparent group w-full md:w-auto only:w-full only:h-full flex-1 flex justify-center h-[400px] rounded-lg overflow-hidden">           
         <video autoPlay muted ref={props.videoRef ?? ref} className={`h-full group-only:mx-auto rounded-lg scale-x-[-1] w-auto object-cover ${showVideo ? '' : 'hidden'}`} playsInline></video>
         {
             !showVideo ?
