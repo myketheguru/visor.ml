@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "peer": "^0.6.1"
+  },
+  "scripts": {
+    "serve": "cd server && yarn start && cd ../client && yarn start && cd ../peerjs && yarn start"
+  }
+}
