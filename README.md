@@ -1,4 +1,3 @@
-# webrtc-react
-Repo for youtube tutorial about webrtc react 
+# Visor.ml
+Repo for visor video conferencing
 
-[Link to the tutorial](https://www.youtube.com/watch?v=3KYKXsnMpAo&list=PLivfVBKXLkx_1VKrqHv4K6sKIoWTEVlJ9)
