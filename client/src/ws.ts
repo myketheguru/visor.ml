@@ -1,4 +1,4 @@
 import socketIOClient from "socket.io-client";
 
-const WS = "143.198.117.135:8080";
+const WS = "https://visorml-server.onrender.com/";
 export const ws = socketIOClient(WS);
