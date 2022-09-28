@@ -149,7 +149,7 @@ export const RoomProvider: React.FunctionComponent = ({ children }) => {
 
     useEffect(() => {
         const peer = new Peer(userId, {
-            host: "localhost",
+            host: "http://localhost",
             port: 9001,
             path: "/",
         });
