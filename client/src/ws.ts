@@ -1,4 +1,4 @@
 import socketIOClient from "socket.io-client";
 
-const WS = "http://157.230.186.22:8080";
-export const ws = socketIOClient(WS);
+const WS = "bknd.visor.ml";
+export const ws = socketIOClient(WS, { secure: false });
