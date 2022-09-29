@@ -149,9 +149,9 @@ export const RoomProvider: React.FunctionComponent = ({ children }) => {
 
     useEffect(() => {
         const peer = new Peer(userId, {
-            host: "157.230.186.22",
-            port: 9001,
-            path: "/",
+            host:'peerjs-server.herokuapp.com', 
+            secure:true, 
+            port:443
         });
         setMe(peer);
 
