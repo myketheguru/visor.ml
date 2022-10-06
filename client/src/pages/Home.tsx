@@ -46,7 +46,7 @@ export const Home = () => {
     }, [ws])
 
     return (
-        <div className='landing min-h-screen grid grid-rows-[auto_1fr] bg-slate-100 dark:bg-[#17181A] dark:text-gray-200 text-gray-600 p-5 px-[10%]'>
+        <div className='landing min-h-screen grid grid-rows-[auto_1fr] bg-[#17181A] text-gray-200 p-5 px-[10%]'>
           <div className="logo flex justify-center items-center gap-2">
             <span className='text-2xl font-thin'>Visor</span>
             <Airdrop size="25" color="#ca8a04" />
@@ -55,15 +55,15 @@ export const Home = () => {
             <h1 className='text-[8vmin] leading-tight font-bold text-[#535760]'>Host meetings a wizard would envy!</h1>
             <p className='text-gray-600 text-lg'>And the best part... It's Free!</p>
             <div className="cta flex flex-col md:flex-row items-center gap-3 py-12 relative">
-              <button className={`${link.trim() ? 'md:-translate-x-14 opacity-20': ''} p-2 px-6 rounded-md md:rounded-full bg-gray-200 dark:bg-[#222426] font-extralight transition-all border border-yellow-600 active:scale-95  disabled:opacity-30 disabled:border-none disabled:active:scale-100 h-12 w-full`} onClick={createRoom} disabled={!!link.trim()}>
+              <button className={`${link.trim() ? 'md:-translate-x-14 opacity-20': ''} p-2 px-6 rounded-md md:rounded-full bg-[#222426] font-extralight transition-all border border-yellow-600 active:scale-95  disabled:opacity-30 disabled:border-none disabled:active:scale-100 h-12 w-full`} onClick={createRoom} disabled={!!link.trim()}>
                 New meeting
               </button>
-              <div className={`${link.trim() ? 'md:-translate-x-14': ''} user-input-area flex gap-2`}>
-                <div className="bg-slate-200 dark:bg-[#242628] flex input-block relative w-[280px] p-2 px-3 border border-slate-300 dark:border-[#3f4145] rounded-md gap-4 h-12">
+              <div className={`${link.trim() ? 'md:-translate-x-14': ''} user-input-area flex gap-2 max-w-[340px] w-full`}>
+                <div className="bg-[#242628] flex input-block relative p-2 px-3 border border-[#3f4145] md:w-[280px] rounded-md gap-4 h-12">
                   <Keyboard size="25" className='self-center' color="#ca8a04"/>
                   <input type="text" placeholder='Enter meet code or paste link' className=' w-full outline-none border-none font-light text-sm focus:border focus:border-[#ca8a04] bg-transparent autofill:!bg-transparent appearance-none' autoComplete="off" name='meet-code' onChange={evt => checkMeetValidity(evt.target.value)} value={link} />
                 </div>
-                <button className={`${link.trim() ? 'md:px-4': ''} disabled:text-gray-700 text-gray-700 bg-yellow-500 disabled:bg-transparent p-2 transition-all rounded-md`} disabled={!link.trim() || !linkValid} onClick={joinExistingMeeting}>Join</button>
+                <button className={`${link.trim() ? 'md:px-4': ''} disabled:text-gray-700 disabled:border disabled:border-gray-800 text-gray-700 bg-yellow-500 disabled:bg-transparent p-2 px-4 transition-all rounded-md`} disabled={!link.trim() || !linkValid} onClick={joinExistingMeeting}>Join</button>
               </div>
 
                 {
