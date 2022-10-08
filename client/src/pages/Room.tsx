@@ -60,7 +60,7 @@ export const Room = () => {
 
 
     return (
-        <div className="meeting min-h-screen bg-slate-100 dark:bg-[#17181A] dark:text-gray-200 text-gray-600 grid grid-rows-[1fr_auto] overflow-hidden">
+        <div className="meeting min-h-screen bg-[#17181A] text-gray-200 grid grid-rows-[1fr_auto] overflow-hidden">
             <main className='grid grid-cols-[1fr_auto]'>
                 <div className={`meet-grid-wrapper pt-5 px-[8%] grid ${shuffleGrid(Object.values(peersToShow).length)} gap-4`}>
                     <VideoCard videoRef={userVideo} />

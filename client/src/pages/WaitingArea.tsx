@@ -41,13 +41,13 @@ const WaitingArea = () => {
         
 
   return (
-    <div className="waiting-area min-h-screen bg-slate-100 dark:bg-[#17181A] dark:text-gray-200 text-gray-600 flex flex-col">
+    <div className="waiting-area min-h-screen bg-[#17181A] text-gray-200 flex flex-col">
         <div className="logo flex justify-center items-center gap-2 p-5">
             <span className='text-2xl font-thin'>Visor</span>
             <Airdrop size="32" color="#ca8a04"/>
         </div>
         <div className="flex flex-col md:flex-row flex-1 mt-20 px-[5%] md:px-[7%] lg:px-[10%] gap-5">
-            <div className="display-user-media bg-slate-200 dark:bg-[#2f3034] flex-1 h-[500px] md:h-[400px] rounded-xl flex justify-center overflow-hidden relative">
+            <div className="display-user-media bg-[#2f3034] flex-1 h-[500px] md:h-[400px] rounded-xl flex justify-center overflow-hidden relative">
                 <video autoPlay muted ref={userVideo} className={`h-[440px] scale-x-[-1] w-auto object-cover ${stream?.getVideoTracks().length ? '' : 'hidden'}`} playsInline></video>
                 <h1 className={`${stream?.getTracks().length === 0 ? 'm-auto font-light text-2xl' : 'hidden'}`}>Camera is starting</h1>
                 <h1 className={`${stream?.getVideoTracks().length === 0 ? 'm-auto font-light text-2xl' : 'hidden'}`}>Camera is off</h1>
@@ -67,7 +67,7 @@ const WaitingArea = () => {
             <div className="join-meet-info flex-1 h-[400px] rounded-xl p-5 flex flex-col justify-center items-center gap-3">
                 <h1 className="text-3xl font-extralight">Ready for this?</h1>
                 <p className='text-xs font-light text-[#7c7f87]'>No one else is here</p>
-                <button className='bg-slate-300 dark:bg-[#2f3034] border border-slate-400 dark:border-[#45474c] p-2 px-5 rounded-full font-light transition-all hover:border-yellow-400 active:scale-95' onClick={() => { meetingDispatch(changeRoomMode('started')) }}>Join now</button>
+                <button className='bg-[#2f3034] border border-[#45474c] p-2 px-5 rounded-full font-light transition-all hover:border-yellow-400 active:scale-95' onClick={() => { meetingDispatch(changeRoomMode('started')) }}>Join now</button>
             </div>
         </div>
     </div>
